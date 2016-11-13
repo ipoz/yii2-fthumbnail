@@ -6,6 +6,10 @@ namespace ipoz\yii2\thumbnail;
 class Image extends \yii\imagine\Image
 {
 
+    /**
+     * @param string $image
+     * @return mixed
+     */
     public static function getSize($image)
     {
         $img = static::ensureImageInterfaceInstance($image);
