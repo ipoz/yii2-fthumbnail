@@ -16,6 +16,12 @@ class Image extends \yii\imagine\Image
         return $img->getSize();
     }
 
+    /**
+     * @param string $image
+     * @param int $width
+     * @param int $height
+     * @return array
+     */
     public static function getNewSize($image, $width, $height)
     {
         $geo = self::getSize($image);
@@ -40,6 +46,10 @@ class Image extends \yii\imagine\Image
         ];
     }
 
+    /**
+     * @param string $image
+     * @return string
+     */
     public static function getMimeType($image)
     {
         $fi = new \finfo(FILEINFO_MIME_TYPE);

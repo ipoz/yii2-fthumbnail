@@ -12,7 +12,7 @@ add
 "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/ipoz/yii2-fthumbnail"
+      "url": "https://github.com/ipoz/yii2-thumbnail"
     }
   ]
 ```
@@ -30,7 +30,7 @@ Configuration app
 ]
 ```
 
-Usage
+Example usage
 ----------
 ```php
 use ipoz\yii2\thumbnail\Image;
