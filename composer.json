@@ -1,0 +1,14 @@
+{
+    "name": "ipoz/yii2-fthumbnail",
+    "description": "Create thumnails ad-hoc",
+    "type": "yii2-extension",
+    "require": {
+        "yiisoft/yii2-imagine": "^2.1"
+    },
+    "authors": [
+        {
+            "name": "ipoz",
+            "email": "rafal@ipoz.eu"
+        }
+    ]
+}
