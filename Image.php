@@ -1,6 +1,6 @@
 <?php
 
-namespace ipoz\yii2\fthumbnail;
+namespace ipoz\yii2\thumbnail;
 
 
 class Image extends \yii\imagine\Image

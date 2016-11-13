@@ -1,14 +1,21 @@
 {
-    "name": "ipoz/yii2-fthumbnail",
-    "description": "Create thumnails ad-hoc",
-    "type": "yii2-extension",
-    "require": {
-        "yiisoft/yii2-imagine": "^2.1"
-    },
-    "authors": [
-        {
-            "name": "ipoz",
-            "email": "rafal@ipoz.eu"
-        }
-    ]
+  "name": "ipoz/yii2-thumbnail",
+  "description": "Create thumnails ad-hoc",
+  "type": "yii2-extension",
+  "minimum-stability": "dev",
+  "require": {
+    "yiisoft/yii2": "*",
+    "yiisoft/yii2-imagine": "^2.1"
+  },
+  "authors": [
+    {
+      "name": "ipoz",
+      "email": "rafal@ipoz.eu"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ipoz\\yii2\\thumbnail\\": ""
+    }
+  }
 }

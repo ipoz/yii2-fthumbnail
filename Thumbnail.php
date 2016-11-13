@@ -1,29 +1,44 @@
 <?php
 
-namespace ipoz\yii2\fthumbnail;
+namespace ipoz\yii2\thumbnail;
 
-use Yii;
 use yii\base\Component;
 
+/**
+ * Class Thumbnail
+ * @package ipoz\yii2\fthumbnail
+ */
 class Thumbnail extends Component
 {
-    public $repositoryDir = null;
-    private $subDir = '';
-    private $originalImageName = null;
+    /**
+     * @var string
+     */
+    public $repositoryDir;
+
+    private $subDir;
+    private $originalImageName;
     private $separator;
 
     public function init()
     {
+        parent::init();
         if (empty($this->repositoryDir)) {
             throw new \InvalidArgumentException('repositoryDir is empty');
         }
 
         if (!file_exists($this->repositoryDir)) {
-            mkdir($this->repositoryDir, 0766, true);
+            throw new \Exception($this->repositoryDir . ' do not exists');
         }
         $this->separator = DIRECTORY_SEPARATOR;
     }
 
+    /**
+     * @param string $imageName
+     * @param int $width
+     * @param int $height
+     * @param string $subDir
+     * @return string
+     */
     public function generateThumbnail($imageName, $width, $height = 0, $subDir = '')
     {
         $this->setSubDir($subDir);
@@ -54,11 +69,8 @@ class Thumbnail extends Component
 
     private function setSubDir($dirName)
     {
-        //Sprawdzić czy zaczyna sie od /
-        $this->subDir = !empty($dirName) ? $this->separator . $dirName : '';
-        if (!empty($this->subDir) && !file_exists($this->repositoryDir)) {
-            mkdir($this->repositoryDir . $this->subDir, 0766, true);
-        }
+        $separator = substr($dirName, 0, 1) !== $this->separator ? $this->separator : '';
+        $this->subDir = !empty($dirName) ? $separator . $dirName : '';
     }
 
     private function getThumbnailPath($width, $height)
