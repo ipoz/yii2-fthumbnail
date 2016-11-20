@@ -23,7 +23,7 @@ Configuration app
 'components' =>
 [
     'thumbnail' => [
-        'class' => 'ipoz\yii2\fthumbnail\Thumbnail',
+        'class' => 'ipoz\yii2\thumbnail\Thumbnail',
         'repositoryDir' => PATH_TO_YOUR_REPOSITORY
     ]
 
