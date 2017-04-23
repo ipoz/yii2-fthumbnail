@@ -1,15 +1,17 @@
 {
   "name": "ipoz/yii2-thumbnail",
   "description": "Create thumnails ad-hoc",
+  "keywords": ["yii2", "extension", "widget", "thumnails"],
   "type": "yii2-extension",
-  "minimum-stability": "dev",
+  "license": "BSD 3-Clause",
+  "minimum-stability": "stable",
   "require": {
     "yiisoft/yii2": "*",
     "yiisoft/yii2-imagine": "^2.1"
   },
   "authors": [
     {
-      "name": "ipoz",
+      "name": "Rafał Ciszewski",
       "email": "rafal@ipoz.eu"
     }
   ],
