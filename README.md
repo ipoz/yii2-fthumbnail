@@ -3,18 +3,13 @@ Generate image thumbnail ad-hoc for Yii2 project
 
 Installation
 ----------
-add
+To install, either run
 ```
-"ipoz/yii2-thumbnail": "@dev"
+composer require ipoz/yii2-thumbnail
 ```
-
+or add to the `required` section of your `composer.json` file
 ```
-"repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/ipoz/yii2-thumbnail"
-    }
-  ]
+"ipoz/yii2-thumbnail": "*" 
 ```
 
 Configuration app
