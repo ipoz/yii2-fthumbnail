@@ -23,7 +23,7 @@ Configuration app
 'components' =>
 [
     'thumbnail' => [
-        'class' => 'ipoz\yii2\fthumbnail\Thumbnail',
+        'class' => 'ipoz\yii2\thumbnail\Thumbnail',
         'repositoryDir' => PATH_TO_YOUR_REPOSITORY
     ]
 
@@ -39,7 +39,7 @@ use ipoz\yii2\thumbnail\Image;
 
 public function actionThumbnail($image, $width, $height = 0, $type = '')
     {
-        $imagePath = \Yii::$app->fthumbnail ->generateThumbnail($image, $width, $height, $type);
+        $imagePath = \Yii::$app->thumbnail->generateThumbnail($image, $width, $height, $type);
         return \Yii::$app->response->sendFile($imagePath, $image, [
             'mimeType' => Image::getMimeType($imagePath),
             'inline' => true,
